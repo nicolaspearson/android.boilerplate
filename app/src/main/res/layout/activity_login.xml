@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.lupinemoon.boilerplate.presentation.ui.features.login.LoginViewModel"/>
+
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/parent_container"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center"
+                 android:background="@color/white"
+                 android:fitsSystemWindows="false">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/splash_background"
+            android:visibility="visible"/>
+
+        <ScrollView
+            android:id="@+id/login_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logo_image_view"
+                    android:layout_width="@dimen/login_logo_width"
+                    android:layout_height="@dimen/default_button_height"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dialog.margin.xl"
+                    app:srcCompat="@drawable/vd_splash_logo"/>
+
+                <LinearLayout
+                    android:id="@+id/login_details_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/login_form_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dialog.margin.l"
+                        android:background="@drawable/rounded_login"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dialog.margin.m">
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:paddingTop="@dimen/dialog.margin.l"
+                            app:error="@{viewModel.getMobileNumberError()}"
+                            app:errorEnabled="true"
+                            app:errorTextAppearance="@style/TextRegular.ErrorText"
+                            app:hintTextAppearance="@style/TextRegular.HintText">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/mobile_number"
+                                style="@style/TextRegular.InputText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_mobile_number"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="@integer/mobile_number_min_length"
+                                android:text="@={viewModel.mobileNumber}"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            style="@style/TextInputLayoutStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            app:error="@{viewModel.getPasswordError()}"
+                            app:errorEnabled="true"
+                            app:errorTextAppearance="@style/TextRegular.ErrorText"
+                            app:hintTextAppearance="@style/TextRegular.HintText"
+                            app:passwordToggleEnabled="true">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/password"
+                                style="@style/TextRegular.InputText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/hint_password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:text="@={viewModel.password}"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/login_button"
+                                style="@style/TextBold.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/default_button_height"
+                                android:layout_margin="@dimen/default_button_margin"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_button_primary_rounded"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:onClick="@{() -> viewModel.onLoginClick()}"
+                                android:text="@string/login"
+                                android:textColor="@color/white"/>
+
+                            <TextView
+                                android:id="@+id/skip_button"
+                                style="@style/TextRegular.Button"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/default_button_height"
+                                android:layout_margin="@dimen/default_button_margin"
+                                android:layout_weight="1"
+                                android:background="@drawable/selector_button_secondary_outline_rounded"
+                                android:onClick="@{() -> viewModel.onSkipClick()}"
+                                android:text="@string/skip"
+                                android:visibility="@{ viewModel.allowSkip ? View.VISIBLE : View.GONE }"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/sign_in_forgot_password_button"
+                        style="@style/TextRegular.Field.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dialog.margin.xl"
+                        android:background="@drawable/line_bottom_bg_accent"
+                        android:onClick="@{() -> viewModel.onForgotPasswordClick()}"
+                        android:paddingBottom="@dimen/dialog.margin.s"
+                        android:paddingEnd="@dimen/dialog.margin.l"
+                        android:paddingLeft="@dimen/dialog.margin.l"
+                        android:paddingRight="@dimen/dialog.margin.l"
+                        android:paddingStart="@dimen/dialog.margin.l"
+                        android:paddingTop="@dimen/dialog.margin.xl"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/white"/>
+
+                    <LinearLayout
+                        android:id="@+id/register_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_button_height"
+                        android:layout_marginTop="@dimen/dialog.margin.l"
+                        android:background="@drawable/selector_button_secondary"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="@{() -> viewModel.onRegisterClick()}"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/TextRegular.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_account"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text.size.cta.m"/>
+
+                        <TextView
+                            style="@style/TextBold.Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dialog.margin.s"
+                            android:layout_marginStart="@dimen/dialog.margin.s"
+                            android:text="@string/join_now"
+                            android:textSize="@dimen/text.size.cta.m"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</layout>

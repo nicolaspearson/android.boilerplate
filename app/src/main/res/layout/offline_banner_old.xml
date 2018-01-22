@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@color/offline_banner_background"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dialog.margin.l"
+                android:paddingLeft="@dimen/dialog.margin.l"
+                android:paddingRight="@dimen/dialog.margin.l"
+                android:paddingStart="@dimen/dialog.margin.l">
+
+    <TextView
+        android:id="@+id/offline_message_text_view"
+        style="@style/TextRegular.Field.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/dialog.margin.l"
+        android:text="@string/offline_banner_message"
+        android:textColor="@color/grey_ee"/>
+
+    <TextView
+        android:id="@+id/offline_more_button"
+        style="@style/TextBold.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dialog.margin.l"
+        android:layout_marginBottom="@dimen/dialog.margin.l"
+        android:background="@drawable/selector_button_primary_dark"
+        android:paddingBottom="@dimen/dialog.margin.m"
+        android:paddingEnd="@dimen/dialog.margin.l"
+        android:paddingLeft="@dimen/dialog.margin.l"
+        android:paddingRight="@dimen/dialog.margin.l"
+        android:paddingStart="@dimen/dialog.margin.l"
+        android:paddingTop="@dimen/dialog.margin.m"
+        android:text="@string/offline_banner_button"
+        android:textColor="@color/grey_ee"
+        android:textSize="@dimen/text.size.xs"/>
+
+</RelativeLayout>

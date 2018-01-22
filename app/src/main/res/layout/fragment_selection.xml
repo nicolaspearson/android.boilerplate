@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dialog.margin.xl">
+
+        <LinearLayout
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dialog.margin.m"
+            android:paddingEnd="@dimen/dialog.margin.l"
+            android:paddingLeft="@dimen/dialog.margin.l"
+            android:paddingRight="@dimen/dialog.margin.l"
+            android:paddingStart="@dimen/dialog.margin.l"
+            android:paddingTop="@dimen/dialog.margin.m">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                style="@style/TextBold.Field.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|left|bottom"
+                android:paddingBottom="@dimen/dialog.margin.m"
+                android:paddingTop="@dimen/dialog.margin.m"
+                android:text="@string/select_an_option"
+                android:textAllCaps="true"
+                android:textColor="@color/black"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/selection_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:fadeScrollbars="false"
+                android:scrollbarFadeDuration="0"
+                android:scrollbars="vertical"/>
+
+            <LinearLayout
+                android:id="@+id/button_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:gravity="end|right|top"
+                android:orientation="horizontal"
+                android:padding="@dimen/dialog.margin.s">
+
+                <RelativeLayout
+                    android:id="@+id/cancel_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button_secondary"
+                    android:clickable="true"
+                    android:padding="@dimen/dialog.margin.l">
+
+                    <TextView
+                        android:id="@+id/cancel_button_text_view"
+                        style="@style/TextBold.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/cancel"
+                        android:textSize="@dimen/text.size.m"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lupinemoon.boilerplate">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.lupinemoon.boilerplate.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="sensor"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name="com.lupinemoon.boilerplate.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.Translucent.Basic">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lupinemoon.boilerplate.presentation.ui.features.splash.SplashActivity"
+            android:label="@string/title_splash"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.Splash" />
+        <activity
+            android:name="com.lupinemoon.boilerplate.presentation.ui.features.login.LoginActivity"
+            android:label="@string/title_login"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.Translucent.Basic" />
+        <activity
+            android:name="com.lupinemoon.boilerplate.presentation.ui.features.landing.LandingActivity"
+            android:label="@string/title_landing"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.Translucent.Basic" />
+
+        <activity
+            android:name="com.lupinemoon.boilerplate.presentation.ui.features.dev.DevActivity"
+            android:theme="@style/AppTheme.Translucent.Basic" />
+    </application>
+
+</manifest>

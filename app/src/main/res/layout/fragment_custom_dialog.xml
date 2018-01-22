@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dialog.margin.xl"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/grey_ee"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dialog.margin.l"
+                android:paddingEnd="@dimen/dialog.margin.xl"
+                android:paddingLeft="@dimen/dialog.margin.xl"
+                android:paddingRight="@dimen/dialog.margin.xl"
+                android:paddingStart="@dimen/dialog.margin.xl"
+                android:paddingTop="@dimen/dialog.margin.l">
+
+                <TextView
+                    android:id="@+id/dialog_title"
+                    style="@style/TextBold.Field.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|left|center_vertical"
+                    android:paddingBottom="@dimen/dialog.margin.m"
+                    android:paddingTop="@dimen/dialog.margin.m"
+                    android:text="Title"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/dialog_message"
+                    style="@style/TextRegular.Dialog.Message.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dialog.margin.s"
+                    android:layout_marginTop="@dimen/dialog.margin.s"
+                    android:gravity="start|left"
+                    android:text="Message"
+                    android:textColor="@color/grey_66" />
+
+                <CheckBox
+                    android:id="@+id/dialog_checkbox_remember"
+                    style="@style/TextMedium.Field.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dont_show_again"
+                    android:textColor="@color/grey_66"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:baselineAligned="false"
+                android:gravity="end|right"
+                android:orientation="horizontal"
+                android:padding="@dimen/dialog.margin.m">
+
+                <RelativeLayout
+                    android:id="@+id/no_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button_dialog"
+                    android:clickable="true"
+                    android:layout_marginRight="@dimen/dialog.margin.s"
+                    android:layout_marginEnd="@dimen/dialog.margin.s"
+                    android:padding="@dimen/dialog.margin.l">
+
+                    <TextView
+                        android:id="@+id/no_button_text_view"
+                        style="@style/TextBold.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/no"
+                        android:textSize="@dimen/text.size.m" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/yes_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_button_dialog"
+                    android:clickable="true"
+                    android:padding="@dimen/dialog.margin.l">
+
+                    <TextView
+                        android:id="@+id/yes_button_text_view"
+                        style="@style/TextBold.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/yes"
+                        android:textSize="@dimen/text.size.m" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/dialog_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/details_container"
+            android:background="@color/grey_ee"
+            android:orientation="vertical"
+            android:padding="@dimen/dialog.margin.xl"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/dialog_image_view"
+                android:layout_width="@dimen/fab.size.xl"
+                android:layout_height="@dimen/fab.size.xl"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/oval_white"
+                android:padding="@dimen/fab.margin.l"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/vd_no_connection" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</layout>

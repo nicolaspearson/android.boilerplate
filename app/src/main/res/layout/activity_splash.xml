@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/splash_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/splash_screen"
+                    android:fitsSystemWindows="false">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash_background"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/splash_image_view"
+                    android:layout_width="@dimen/default_splash_logo_width"
+                    android:layout_height="@dimen/default_button_height"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/vd_splash_logo"/>
+
+                <TextView
+                    android:id="@+id/version_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dialog.margin.xxl"
+                    android:textColor="@color/grey_df"
+                    android:textSize="@dimen/text.size.s"
+                    android:textStyle="normal"/>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#607D8B</color>
+    <color name="color_primary_dark">#455A64</color>
+    <color name="color_primary_light">#CFD8DC</color>
+    <color name="color_accent">#00BCD4</color>
+    <color name="color_accent_faded">#6000BCD4</color>
+    <color name="color_accent_light">#B2EBF2</color>
+
+    <color name="button_primary">@color/color_accent</color>
+    <color name="button_primary_faded">@color/color_accent_faded</color>
+    <color name="button_primary_ripple">@color/fab_ripple_light</color>
+    <color name="button_secondary">@color/white</color>
+    <color name="button_secondary_outline">@color/color_accent</color>
+    <color name="button_secondary_ripple">@color/fab_ripple</color>
+    <color name="button_tertiary">@color/onboarding_overlay</color>
+    <color name="button_tertiary_outline">@color/white</color>
+    <color name="button_tertiary_ripple">@color/fab_ripple</color>
+    <color name="button_disabled">@color/transparent</color>
+    <color name="button_disabled_outline">@color/grey_df</color>
+
+    <color name="fab_ripple">#CC00BCD4</color>
+    <color name="fab_ripple_light">#CCB2EBF2</color>
+    <color name="fab_ripple_dislike">#CC596FCD</color>
+
+    <color name="login_container">@color/white</color>
+
+    <color name="splash_screen">@color/grey_3e</color>
+
+    <color name="text_primary">#3D4A58</color>
+    <color name="text_secondary">#989EA4</color>
+    <color name="text_error">@color/red</color>
+    <color name="text_label_grey">#929292</color>
+
+    <color name="text_primary_light">#FFFFFF</color>
+    <color name="text_secondary_light">#AEAEAE</color>
+
+    <color name="toolbar">@color/color_primary</color>
+    <color name="toolbar_primary_text">@color/white</color>
+    <color name="toolbar_secondary_text">@color/grey_df</color>
+
+    <color name="menu">#FFFFFF</color>
+    <color name="menu_icon_selected">@color/color_accent</color>
+    <color name="menu_icon_not_selected">@color/grey_33</color>
+    <color name="menu_icon_disabled">@color/grey_ae</color>
+    <color name="menu_divider_color">@color/color_primary</color>
+
+    <color name="navigation_drawer_header">@color/grey_ae</color>
+    <color name="navigation_drawer_overlay">#DD533838</color>
+
+    <color name="onboarding_overlay">#DD533838</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="red">#FF6060</color>
+
+    <color name="grey_ee">#EEEEEE</color>
+    <color name="grey_ef">#EFEFEF</color>
+    <color name="grey_df">#DFDFDF</color>
+    <color name="grey_ae">#AEAEAE</color>
+    <color name="grey_99">#999999</color>
+    <color name="grey_66">#666666</color>
+    <color name="grey_3e">#3E3E3E</color>
+    <color name="grey_33">#333333</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_trans_90">#E6FFFFFF</color>
+    <color name="white_trans_70">#B2FFFFFF</color>
+    <color name="white_trans_50">#7FFFFFFF</color>
+    <color name="white_trans_33">#54FFFFFF</color>
+    <color name="white_trans_25">#40FFFFFF</color>
+    <color name="black_trans_80">#D5000000</color>
+    <color name="black_trans_70">#B2000000</color>
+    <color name="black_trans_60">#AA000000</color>
+    <color name="black_trans_50">#7F000000</color>
+    <color name="black_trans_40">#66000000</color>
+    <color name="black_trans_33">#54222222</color>
+    <color name="black">#222222</color>
+
+    <color name="offline_banner_background">#E6455A64</color>
+
+    <color name="toasty_default_text_color">#FFFFFF</color>
+    <color name="toasty_error_color">#F44336</color>
+    <color name="toasty_info_color">@color/color_accent</color>
+    <color name="toasty_success_color">#388E3C</color>
+    <color name="toasty_warning_color">#FFC107</color>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="dialog.margin.xs">2dp</dimen>
+    <dimen name="dialog.margin.s">4dp</dimen>
+    <dimen name="dialog.margin.m">8dp</dimen>
+    <dimen name="dialog.margin.l">16dp</dimen>
+    <dimen name="dialog.margin.xl">20dp</dimen>
+    <dimen name="dialog.margin.xxl">40dp</dimen>
+
+    <dimen name="text.size.xxs">8sp</dimen>
+    <dimen name="text.size.xs">12sp</dimen>
+    <dimen name="text.size.s">14sp</dimen>
+    <dimen name="text.size.m">16sp</dimen>
+    <dimen name="text.size.l">24sp</dimen>
+    <dimen name="text.size.xl">34sp</dimen>
+    <dimen name="text.size.xxl">50sp</dimen>
+
+    <dimen name="fab.size.s">50dp</dimen>
+    <dimen name="fab.size.m">60dp</dimen>
+    <dimen name="fab.size.l">80dp</dimen>
+    <dimen name="fab.size.xl">100dp</dimen>
+    <dimen name="fab.size.xxl">120dp</dimen>
+    <dimen name="fab.size.xxxl">140dp</dimen>
+
+    <dimen name="fab.margin.s">4dp</dimen>
+    <dimen name="fab.margin.m">10dp</dimen>
+    <dimen name="fab.margin.l">12dp</dimen>
+    <dimen name="fab.margin.xl">18dp</dimen>
+
+    <dimen name="fab.elevation.s">2dp</dimen>
+    <dimen name="fab.elevation.m">4dp</dimen>
+
+    <dimen name="default_splash_logo_width">150dp</dimen>
+
+    <dimen name="default_button_height">54dp</dimen>
+    <dimen name="default_button_margin">8dp</dimen>
+
+    <dimen name="custom_dialog_corner_radius">5dp</dimen>
+
+    <dimen name="loader_dimen">48dp</dimen>
+    <dimen name="loader_content_dimen">34dp</dimen>
+
+    <dimen name="check_mark_size">24dp</dimen>
+
+    <dimen name="login_logo_width">180dp</dimen>
+    <dimen name="login_logo_height">120dp</dimen>
+
+    <dimen name="text.size.cta.m">16sp</dimen>
+
+    <dimen name="oval_splash_logo_size">200dp</dimen>
+
+    <dimen name="button_border_width">2dp</dimen>
+    <dimen name="button_rounding_width_s">2dp</dimen>
+    <dimen name="button_rounding_width_m">4dp</dimen>
+
+</resources>

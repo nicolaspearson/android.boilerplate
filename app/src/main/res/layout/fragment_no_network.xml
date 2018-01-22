@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_ee"
+        android:visibility="visible">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dialog.margin.l"
+            app:cardElevation="@dimen/fab.elevation.s">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/no_network_details_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/dialog.margin.m"
+                        android:paddingEnd="@dimen/text.size.l"
+                        android:paddingLeft="@dimen/text.size.l"
+                        android:paddingRight="@dimen/dialog.margin.l"
+                        android:paddingStart="@dimen/text.size.l"
+                        android:paddingTop="@dimen/dialog.margin.m">
+
+                        <com.lupinemoon.boilerplate.presentation.widgets.autofit.AutofitTextView
+                            android:id="@+id/no_network_title"
+                            style="@style/TextMedium.Dialog.Title.Large"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/title_network_error"
+                            app:minTextSize="@dimen/text.size.s"/>
+
+                        <com.lupinemoon.boilerplate.presentation.widgets.autofit.AutofitTextView
+                            android:id="@+id/no_network_message"
+                            style="@style/TextRegular.Dialog.Message.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/message_network_error"
+                            app:minTextSize="@dimen/text.size.s"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/no_network_button_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_bottom_bg_white">
+
+                        <TextView
+                            android:id="@+id/no_network_button"
+                            style="@style/TextRegular.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_button_height"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/default_button_margin"
+                            android:background="@drawable/selector_button_secondary_outline_rounded"
+                            android:clickable="true"
+                            android:text="@string/retry"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/no_network_image_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/no_network_details_container"
+                    android:background="@drawable/rounded_top_bg_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dialog.margin.m"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_top_bg_grey_ee">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/fab.size.xxl"
+                            android:layout_height="@dimen/fab.size.xxl"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/no_network_image_view"
+                                android:layout_width="@dimen/fab.size.xxl"
+                                android:layout_height="@dimen/fab.size.xxl"
+                                android:layout_gravity="center"
+                                android:layout_margin="20dp"
+                                android:background="@drawable/oval_white"
+                                android:padding="@dimen/fab.margin.l"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/vd_no_connection"/>
+
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

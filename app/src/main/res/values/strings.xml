@@ -1,0 +1,107 @@
+<resources>
+    <string name="app_name">Boilerplate</string>
+
+    <!-- General -->
+    <string name="version">v %1$s (%2$d)</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Closed</string>
+    <string name="back_press_exit">"Press back again to exit"</string>
+
+    <!-- Bug Fix for TextInputLayout -->
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+
+    <!-- Dialog -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="title_network_error">Something\'s not right</string>
+    <string name="message_network_error">Please make sure that you’re connected to the internet.</string>
+    <string name="title_generic_request_failed">Request Failed</string>
+    <string name="message_generic_request_failed">Oops! We’re having some technical issues. Stay tuned, we’ll be up and running soon.</string>
+    <string name="retry">Retry</string>
+    <string name="try_again">Try Again</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok_got_it">OK, GOT IT</string>
+    <string name="get_started">Get Started</string>
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+    <string name="_continue">Continue</string>
+    <string name="confirm">Confirm</string>
+    <string name="skip">SKIP</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="on">on</string>
+    <string name="not_now">Not Now</string>
+    <string name="saving">Saving&#8230;</string>
+    <string name="select_an_option">Select An Option</string>
+
+    <!-- Snackbar -->
+    <string name="snackbar_dismiss_action">Dismiss</string>
+    <string name="snackbar_undo_action">Undo</string>
+
+    <!-- Splash -->
+    <string name="title_splash">Splash</string>
+    <string name="analytics_splash">@string/title_splash</string>
+
+    <!-- Play Services -->
+    <string name="dont_show_again">Don\'t show again</string>
+    <string name="title_play_services_not_found">Play Services Not Found</string>
+    <string name="message_play_services_not_found">This app makes use of Google Play Services. For best results, please install Google Play Services now.</string>
+
+    <!-- Landing -->
+    <string name="title_landing">Landing</string>
+    <string name="analytics_landing">Landing</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="toolbar_title_home">@string/app_name</string>
+
+    <!-- Login -->
+    <string name="title_login">Login</string>
+    <string name="analytics_login">@string/title_login</string>
+    <string name="login">Login</string>
+    <string name="hint_mobile_number">MOBILE NUMBER</string>
+    <string name="error_mobile_number_invalid_length">Mobile number must be a minimum of %d numbers</string>
+    <string name="error_please_fill_in_mobile_number">Please enter a mobile number</string>
+    <string name="hint_password">PASSWORD</string>
+    <string name="error_password_invalid_length">Password must be a minimum of %d characters</string>
+    <string name="error_please_fill_in_password">Please enter a password</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="title_login_failed">Login Failed</string>
+    <string name="join_now">Join now</string>
+
+    <!-- Forgot Password -->
+    <string name="forgot_password">Forgot Password?</string>
+
+    <!-- Offline -->
+    <string name="title_offline">Offline Mode</string>
+    <string name="analytics_offline">Offline</string>
+    <string name="offline_header_title">You\'re Offline</string>
+    <string name="offline_header_message">You aren\'t connected to the internet but don\'t worry, you can still enjoy using %1$s!</string>
+    <string name="offline_section_1_title">Find a Match</string>
+    <string name="offline_section_1_message">You can browse a few more profiles and your like/dislike choice will be saved but you\'ll have to connect to the internet to get new profiles.</string>
+    <string name="offline_section_2_title">Chats</string>
+    <string name="offline_section_2_message">We\'ll save all your messages in offline mode, but in order to send them, you\'ll need to connect to the internet.</string>
+    <string name="offline_banner_message">You\’re in offline mode</string>
+    <string name="offline_banner_button">MORE</string>
+    <string name="offline_banner_connected_message">Syncing everything&#8230;</string>
+
+    <!-- Subscribe -->
+    <string name="title_subscription_expired">Subscription Expired</string>
+    <string name="message_subscription_expired">Your subscription has expired to continue enjoying this service please subscribe.</string>
+    <string name="subscribe">Subscribe</string>
+
+    <!-- Dev -->
+    <string name="title_dev">Dev</string>
+    <string name="analytics_dev">Dev</string>
+    <string name="export_database">Export Database</string>
+    <string name="test_post_fail">Test POST Fail</string>
+    <string name="export_failed">Export Failed</string>
+    <string name="realm">Realm</string>
+    <string name="email">Email</string>
+
+    <!-- Upload -->
+    <string name="saving_success">Saved successfully</string>
+    <string name="saving_cancelled">Saving cancelled</string>
+    <string name="saving_did_not_complete">Upload failed</string>
+
+</resources>

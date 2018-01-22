@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/button_primary_ripple">
+    <item>
+        <selector>
+            <item
+                android:drawable="@drawable/oval_check_mark_selected"
+                android:state_checked="true"/>
+            <item
+                android:drawable="@drawable/oval_check_mark_not_selected"
+                android:state_checked="false"/>
+        </selector>
+    </item>
+</ripple>

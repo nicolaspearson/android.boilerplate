@@ -1,0 +1,422 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorControlHighlight">@color/fab_ripple</item>
+        <item name="colorControlNormal">@color/grey_ae</item>
+        <item name="colorControlActivated">@color/color_accent</item>
+
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:listDivider">@color/grey_df</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:ignore="NewApi">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowActionBar">true</item>
+
+        <item name="android:alertDialogTheme">@style/DialogStyle</item>
+        <item name="alertDialogTheme">@style/DialogStyle</item>
+    </style>
+
+    <!-- Added this style to prevent black backgrounds through transitions -->
+    <style name="AppTheme.Translucent.Basic" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:ignore="NewApi">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@color/splash_screen</item>
+    </style>
+
+    <style name="AppTheme.OverlapSystemBar">
+
+    </style>
+
+    <style name="AppTheme.Translucent">
+        <item name="android:textColorHint">@color/grey_ae</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- ToolBar -->
+    <style name="ToolBarStyle" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/toolbar_primary_text</item>
+        <item name="android:textColorSecondary">@color/toolbar_secondary_text</item>
+        <item name="android:textColorHint">@color/grey_ae</item>
+        <item name="android:background">@color/toolbar</item>
+        <item name="colorControlHighlight">@color/fab_ripple</item>
+    </style>
+
+    <style name="ToolbarPopupStyle" parent="@style/ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">@color/fab_ripple</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <!-- Navigation Drawer -->
+    <style name="NavigationDrawerStyle">
+        <item name="android:textColor">@color/color_primary_dark</item>
+        <item name="android:textSize">@dimen/text.size.s</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Progress Bar -->
+    <style name="CircularProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <style name="Widget.MaterialProgressBar.ProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
+        <item name="android:minWidth">48dp</item>
+        <item name="android:maxWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="TransparentLowDimDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:layout_margin">@dimen/dialog.margin.xs</item>
+    </style>
+
+    <style name="TransparentFullScreenDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="listPreferredItemPaddingLeft">0dip</item>
+        <item name="listPreferredItemPaddingRight">0dip</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:windowTitleStyle">@style/DialogTitleTextStyle</item>
+    </style>
+
+    <style name="DialogTitleTextStyle">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="DatePickerDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+    </style>
+
+    <!-- Tabs -->
+    <style name="LandingTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_accent</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabPaddingStart">4dp</item>
+        <item name="tabPaddingEnd">4dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/LandingTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/color_accent</item>
+    </style>
+
+    <style name="LandingTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="ListButtonStyle">
+        <item name="android:background">@drawable/rounded_login</item>
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:textColor">@color/grey_3e</item>
+    </style>
+
+    <!-- Text -->
+    <style name="TextRegular">
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="fontPath">fonts/Roboto-Medium.ttf</item>
+    </style>
+
+    <style name="TextLight">
+        <item name="fontPath">fonts/Roboto-Light.ttf</item>
+    </style>
+
+    <style name="TextBold">
+        <item name="fontPath">fonts/Roboto-Bold.ttf</item>
+    </style>
+
+    <style name="TextItalic">
+        <item name="fontPath">fonts/Roboto-Italic.ttf</item>
+    </style>
+
+    <!-- Medium -->
+    <style name="TextMedium.Dialog">
+        <item name="android:textColor">@color/grey_3e</item>
+    </style>
+
+    <style name="TextMedium.Dialog.Title">
+        <item name="android:textColor">@color/grey_3e</item>
+        <item name="android:textSize">@dimen/text.size.l</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextMedium.Dialog.Title.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextMedium.Dialog.Title.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <style name="TextMedium.Dialog.Title.ExtraLarge">
+        <item name="android:textSize">@dimen/text.size.xl</item>
+    </style>
+
+    <style name="TextMedium.Field">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextMedium.Field.ExtraSmall">
+        <item name="android:textSize">@dimen/text.size.xs</item>
+    </style>
+
+    <style name="TextMedium.Field.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextMedium.Field.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextMedium.Field.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <!-- Bold -->
+    <style name="TextBold.Field">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextBold.Field.ExtraSmall">
+        <item name="android:textSize">@dimen/text.size.xs</item>
+    </style>
+
+    <style name="TextBold.Field.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextBold.Field.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextBold.Field.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <!-- Regular -->
+    <style name="TextRegular.Dialog">
+        <item name="android:textColor">@color/grey_ae</item>
+    </style>
+
+    <style name="TextRegular.Dialog.Message">
+        <item name="android:textColor">@color/grey_ae</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minLines">1</item>
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:padding">@dimen/dialog.margin.xs</item>
+    </style>
+
+    <style name="TextRegular.Dialog.Message.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextRegular.Dialog.Message.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextRegular.Dialog.Message.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <style name="TextRegular.Title">
+        <item name="android:textColor">@color/grey_66</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextRegular.Title.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextRegular.Title.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextRegular.Title.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <style name="TextRegular.Field">
+        <item name="android:gravity">left</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextRegular.Field.ExtraSmall">
+        <item name="android:textSize">@dimen/text.size.xs</item>
+    </style>
+
+    <style name="TextRegular.Field.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextRegular.Field.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextRegular.Field.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <style name="TextRegular.InputText">
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextRegular.InputHeading">
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:textColor">@color/text_label_grey</item>
+    </style>
+
+    <style name="TextRegular.HintText">
+        <item name="android:textSize">@dimen/text.size.s</item>
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextRegular.ErrorText">
+        <item name="android:textSize">@dimen/text.size.xs</item>
+        <item name="android:textColor">@color/text_error</item>
+    </style>
+
+    <!-- Italic -->
+    <style name="TextItalic.Field">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextItalic.Field.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextItalic.Field.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <!-- Light -->
+    <style name="TextLight.Field">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextLight.Field.ExtraSmall">
+        <item name="android:textSize">@dimen/text.size.xs</item>
+    </style>
+
+    <style name="TextLight.Field.Small">
+        <item name="android:textSize">@dimen/text.size.s</item>
+    </style>
+
+    <style name="TextLight.Field.Medium">
+        <item name="android:textSize">@dimen/text.size.m</item>
+    </style>
+
+    <style name="TextLight.Field.Large">
+        <item name="android:textSize">@dimen/text.size.l</item>
+    </style>
+
+    <!-- Text Input -->
+    <style name="TextInputLayoutStyle">
+        <item name="android:layout_marginLeft">@dimen/dialog.margin.l</item>
+        <item name="android:layout_marginRight">@dimen/dialog.margin.l</item>
+    </style>
+
+    <!-- Buttons -->
+    <style name="Button">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+    </style>
+
+    <style name="Button.Empty">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_margin">@dimen/dialog.margin.m</item>
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:padding">@dimen/dialog.margin.m</item>
+    </style>
+
+    <style name="TextBold.Button">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextBold.Button.Small">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textSize">@dimen/text.size.s</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextRegular.Button">
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textSize">@dimen/text.size.m</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="CheckBoxStyle">
+
+    </style>
+
+</resources>

@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/button_secondary_ripple" />
+            <corners
+                android:bottomLeftRadius="@dimen/button_rounding_width_m"
+                android:bottomRightRadius="@dimen/button_rounding_width_m"
+                android:topLeftRadius="@dimen/button_rounding_width_m"
+                android:topRightRadius="@dimen/button_rounding_width_m"/>
+        </shape>
+    </item>
+
+</layer-list>

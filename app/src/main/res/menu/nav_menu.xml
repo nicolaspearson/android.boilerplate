@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/group_menu"
+        android:checkableBehavior="single"
+        android:enabled="true">
+
+        <item
+            android:id="@+id/home_navigation_menu_item"
+            android:enabled="true"
+            android:icon="@drawable/vd_home"
+            android:title="@string/home"/>
+
+        <item
+            android:id="@+id/next_navigation_menu_item"
+            android:enabled="true"
+            android:icon="@drawable/vd_settings"
+            android:title="Next Item"
+            app:actionLayout="@layout/navigation_drawer_counter"/>
+
+        <item
+            android:id="@+id/logout_navigation_menu_item"
+            android:checkable="false"
+            android:enabled="true"
+            android:icon="@drawable/vd_logout"
+            android:title="@string/logout"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group_dev"
+        android:checkable="false"
+        android:checkableBehavior="none"
+        android:enabled="true"
+        android:visible="false">
+
+        <item
+            android:id="@+id/dev_settings_navigation_menu_item"
+            android:checkable="false"
+            android:icon="@drawable/vd_dev_settings"
+            android:title="Dev Settings"/>
+
+    </group>
+</menu>

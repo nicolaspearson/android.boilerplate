@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/button_primary_ripple">
+    <item android:drawable="@drawable/button_primary_rounded"/>
+    <item>
+        <selector>
+            <item
+                android:drawable="@drawable/button_disabled_rounded"
+                android:state_enabled="false"/>
+            <item android:drawable="@drawable/button_primary_rounded"/>
+        </selector>
+    </item>
+</ripple>

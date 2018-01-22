@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lupinemoon.boilerplate.presentation.ui.features.landing.home.HomeViewModel"/>
+
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@color/grey_ee">
+
+        <RelativeLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_ee">
+
+            <TextView
+                style="@style/TextBold.Field.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/home"
+                android:textAllCaps="true"
+                android:textColor="@color/grey_3e"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_ee"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/no_network_layout"
+            layout="@layout/fragment_no_network"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/offline_banner_layout"
+            layout="@layout/offline_banner"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</layout>

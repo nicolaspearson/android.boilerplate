@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lupinemoon.boilerplate.presentation.utils.adapters.SelectionItemViewModel"/>
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/option_container"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/selector_button_secondary"
+                  android:clickable="true"
+                  android:onClick="@{() -> viewModel.onItemClicked()}"
+                  android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/option_text_view"
+            style="@style/TextRegular.Field.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dialog.margin.m"
+            android:text="@{viewModel.value}"
+            android:textColor="@color/grey_66"/>
+
+    </LinearLayout>
+
+</layout>

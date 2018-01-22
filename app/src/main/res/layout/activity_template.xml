@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lupinemoon.boilerplate.presentation.ui.features.template.TemplateViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/template_button"
+            style="@style/TextBold.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:layout_margin="@dimen/default_button_margin"
+            android:background="@drawable/selector_button_primary"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="@{viewModel::onTemplateClick}"
+            android:text="Template"
+            android:textColor="@color/white"/>
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:error="@{viewModel.getTemplateString()}"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/TextRegular.ErrorText"
+            app:hintTextAppearance="@style/TextRegular.HintText">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/template_string"
+                style="@style/TextRegular.InputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="HINT"
+                android:inputType="number"
+                android:text="@={viewModel.templateString}"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+</layout>

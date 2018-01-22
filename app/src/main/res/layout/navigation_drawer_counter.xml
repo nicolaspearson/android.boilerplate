@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nav_drawer_counter_text_view"
+        style="@style/TextMedium.Field.ExtraSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/oval_accent"
+        android:gravity="center"
+        android:text="99+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+</LinearLayout>
