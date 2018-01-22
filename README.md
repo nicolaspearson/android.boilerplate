@@ -1,6 +1,6 @@
 # README
 
-An opinionated Android starter project, it includes a login page, and various other pre-optimizations that I prefer using when developing an Android app, e.g. RxJava, Realm, etc.
+An opinionated Android starter project, it includes a login page, and various other pre-optimizations that I prefer using when developing an Android app, including offline support, e.g. RxJava, Realm, Retrofit, Crashlytics, Data-binding etc.
 
 ### How do I get set up?
 
@@ -28,6 +28,7 @@ An opinionated Android starter project, it includes a login page, and various ot
 * [OK HTTP](https://github.com/square/okhttp)
 * [Parceler](https://github.com/johncarl81/parceler)
 * [Play Services](https://developers.google.com/android/guides/overview)
+* [Realm](https://github.com/realm/realm-java)
 * [Retrofit](https://github.com/square/retrofit)
 * [RxAndroid](https://github.com/ReactiveX/RxAndroid)
 * [RxJava](https://github.com/ReactiveX/RxJava)
