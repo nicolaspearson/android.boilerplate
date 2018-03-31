@@ -8,9 +8,10 @@ import android.view.View;
 import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.BuildConfig;
 import com.lupinemoon.boilerplate.R;
+
+import timber.log.Timber;
 
 public class PopupLoader {
 

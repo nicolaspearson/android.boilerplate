@@ -6,6 +6,13 @@ import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.lupinemoon.boilerplate.BuildConfig;
+import com.lupinemoon.boilerplate.data.models.AppError;
+import com.lupinemoon.boilerplate.data.models.AppErrorResponse;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.RxBus;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.events.PostRequestFailedEvent;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.events.SubscriptionExpiredEvent;
+import com.lupinemoon.boilerplate.presentation.utils.Constants;
 
 import java.io.File;
 import java.io.IOException;
@@ -24,13 +31,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import timber.log.Timber;
-import com.lupinemoon.boilerplate.BuildConfig;
-import com.lupinemoon.boilerplate.data.models.AppError;
-import com.lupinemoon.boilerplate.data.models.AppErrorResponse;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.RxBus;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.events.PostRequestFailedEvent;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.events.SubscriptionExpiredEvent;
-import com.lupinemoon.boilerplate.presentation.utils.Constants;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 

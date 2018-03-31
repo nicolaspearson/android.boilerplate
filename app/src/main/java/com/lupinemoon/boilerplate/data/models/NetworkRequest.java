@@ -1,12 +1,13 @@
 package com.lupinemoon.boilerplate.data.models;
 
+import com.lupinemoon.boilerplate.presentation.utils.StringUtils;
+
 import io.realm.RealmObject;
 import io.realm.annotations.Index;
 import io.realm.annotations.PrimaryKey;
 import lombok.ToString;
 import okhttp3.Headers;
 import okhttp3.RequestBody;
-import com.lupinemoon.boilerplate.presentation.utils.StringUtils;
 
 /**
  *  Request object used to save the state of a network call.

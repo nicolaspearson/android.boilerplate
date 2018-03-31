@@ -10,12 +10,6 @@ import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.core.CrashlyticsCore;
-import com.squareup.leakcanary.LeakCanary;
-
-import io.fabric.sdk.android.Fabric;
-import io.realm.Realm;
-import timber.log.Timber;
-import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import com.lupinemoon.boilerplate.data.analytics.AnalyticsService;
 import com.lupinemoon.boilerplate.data.storage.AppRepository;
 import com.lupinemoon.boilerplate.data.storage.interfaces.Storage;
@@ -23,6 +17,12 @@ import com.lupinemoon.boilerplate.data.storage.local.AppLocalDataStore;
 import com.lupinemoon.boilerplate.data.storage.prefs.SharedPreferencesStorage;
 import com.lupinemoon.boilerplate.presentation.utils.Constants;
 import com.lupinemoon.boilerplate.presentation.widgets.AppLifecycleHandler;
+import com.squareup.leakcanary.LeakCanary;
+
+import io.fabric.sdk.android.Fabric;
+import io.realm.Realm;
+import timber.log.Timber;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class MainApplication extends Application {
 

@@ -5,6 +5,9 @@ import android.text.TextUtils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.lupinemoon.boilerplate.R;
+import com.lupinemoon.boilerplate.data.models.AppError;
+import com.lupinemoon.boilerplate.data.models.AppErrorResponse;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -19,9 +22,6 @@ import okio.Buffer;
 import okio.BufferedSource;
 import retrofit2.HttpException;
 import timber.log.Timber;
-import com.lupinemoon.boilerplate.R;
-import com.lupinemoon.boilerplate.data.models.AppError;
-import com.lupinemoon.boilerplate.data.models.AppErrorResponse;
 
 
 public class ErrorUtils {

@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
+import com.lupinemoon.boilerplate.presentation.widgets.recyclerview.internal.ViewHelper;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.lupinemoon.boilerplate.presentation.widgets.recyclerview.internal.ViewHelper;
 
 public abstract class BaseItemAnimator extends SimpleItemAnimator {
 

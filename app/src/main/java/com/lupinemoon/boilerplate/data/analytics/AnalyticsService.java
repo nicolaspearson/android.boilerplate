@@ -3,7 +3,6 @@ package com.lupinemoon.boilerplate.data.analytics;
 import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.ContentViewEvent;
 import com.crashlytics.android.answers.CustomEvent;
-
 import com.lupinemoon.boilerplate.data.analytics.interfaces.IAnalyticsService;
 
 public class AnalyticsService implements IAnalyticsService {

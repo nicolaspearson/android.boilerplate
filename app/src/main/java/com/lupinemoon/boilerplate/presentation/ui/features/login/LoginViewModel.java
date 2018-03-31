@@ -10,13 +10,14 @@ import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.BR;
 import com.lupinemoon.boilerplate.BuildConfig;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.presentation.ui.base.BaseViewModel;
 import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
 import com.lupinemoon.boilerplate.presentation.widgets.Toasty;
+
+import timber.log.Timber;
 
 public class LoginViewModel extends BaseViewModel implements LoginContract.ViewModel {
 

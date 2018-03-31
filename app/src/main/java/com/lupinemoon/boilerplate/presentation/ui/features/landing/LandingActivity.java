@@ -14,10 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.BuildConfig;
 import com.lupinemoon.boilerplate.MainApplication;
 import com.lupinemoon.boilerplate.R;
@@ -31,11 +27,16 @@ import com.lupinemoon.boilerplate.presentation.ui.base.BaseFragment;
 import com.lupinemoon.boilerplate.presentation.ui.features.dev.DevActivity;
 import com.lupinemoon.boilerplate.presentation.ui.features.landing.home.HomeFragment;
 import com.lupinemoon.boilerplate.presentation.ui.features.login.LoginActivity;
-import com.lupinemoon.boilerplate.presentation.utils.AndroidUtils;
-import com.lupinemoon.boilerplate.presentation.utils.Constants;
 import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
+import com.lupinemoon.boilerplate.presentation.utils.AndroidUtils;
 import com.lupinemoon.boilerplate.presentation.utils.AnimationUtils;
+import com.lupinemoon.boilerplate.presentation.utils.Constants;
 import com.lupinemoon.boilerplate.presentation.widgets.Toasty;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.functions.Consumer;
+import io.reactivex.schedulers.Schedulers;
+import timber.log.Timber;
 
 public class LandingActivity extends BaseDrawerActivity<ActivityLandingBinding> implements LandingContract.View, NavigationView.OnNavigationItemSelectedListener {
 

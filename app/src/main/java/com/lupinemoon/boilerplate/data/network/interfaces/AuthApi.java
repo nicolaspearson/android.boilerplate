@@ -1,10 +1,11 @@
 package com.lupinemoon.boilerplate.data.network.interfaces;
 
+import com.lupinemoon.boilerplate.data.models.AuthToken;
+
 import io.reactivex.Flowable;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
-import com.lupinemoon.boilerplate.data.models.AuthToken;
 
 public interface AuthApi {
 

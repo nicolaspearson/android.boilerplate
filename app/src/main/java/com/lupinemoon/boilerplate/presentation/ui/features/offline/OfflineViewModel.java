@@ -4,11 +4,11 @@ import android.databinding.Bindable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import java.util.Locale;
-
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.presentation.ui.base.BaseViewModel;
 import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
+
+import java.util.Locale;
 
 public class OfflineViewModel extends BaseViewModel implements OfflineContract.ViewModel {
 

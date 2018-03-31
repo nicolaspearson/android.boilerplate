@@ -2,8 +2,6 @@ package com.lupinemoon.boilerplate.data.network.services;
 
 import android.content.Context;
 
-import io.reactivex.Flowable;
-import io.reactivex.functions.Function;
 import com.lupinemoon.boilerplate.MainApplication;
 import com.lupinemoon.boilerplate.data.models.AuthToken;
 import com.lupinemoon.boilerplate.data.network.interfaces.AuthApi;
@@ -11,6 +9,9 @@ import com.lupinemoon.boilerplate.data.network.rest.ServiceGenerator;
 import com.lupinemoon.boilerplate.data.storage.AppRepository;
 import com.lupinemoon.boilerplate.presentation.utils.Constants;
 import com.lupinemoon.boilerplate.presentation.utils.DateTimeUtils;
+
+import io.reactivex.Flowable;
+import io.reactivex.functions.Function;
 
 public class AuthService {
 

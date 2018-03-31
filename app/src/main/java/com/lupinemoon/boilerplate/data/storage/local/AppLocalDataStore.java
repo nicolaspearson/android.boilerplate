@@ -2,6 +2,15 @@ package com.lupinemoon.boilerplate.data.storage.local;
 
 import android.content.Context;
 
+import com.lupinemoon.boilerplate.BuildConfig;
+import com.lupinemoon.boilerplate.data.models.AuthToken;
+import com.lupinemoon.boilerplate.data.models.KeyValue;
+import com.lupinemoon.boilerplate.data.models.NetworkHeader;
+import com.lupinemoon.boilerplate.data.models.NetworkMediaType;
+import com.lupinemoon.boilerplate.data.models.NetworkRequest;
+import com.lupinemoon.boilerplate.data.models.NetworkRequestBody;
+import com.lupinemoon.boilerplate.data.storage.interfaces.AppDataStore;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,14 +23,6 @@ import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
 import timber.log.Timber;
-import com.lupinemoon.boilerplate.BuildConfig;
-import com.lupinemoon.boilerplate.data.models.AuthToken;
-import com.lupinemoon.boilerplate.data.models.NetworkHeader;
-import com.lupinemoon.boilerplate.data.models.NetworkMediaType;
-import com.lupinemoon.boilerplate.data.models.NetworkRequest;
-import com.lupinemoon.boilerplate.data.models.NetworkRequestBody;
-import com.lupinemoon.boilerplate.data.models.KeyValue;
-import com.lupinemoon.boilerplate.data.storage.interfaces.AppDataStore;
 
 public class AppLocalDataStore implements AppDataStore {
 

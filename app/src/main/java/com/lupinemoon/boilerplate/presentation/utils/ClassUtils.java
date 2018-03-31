@@ -21,7 +21,7 @@ public class ClassUtils {
                 // Provided only 1 activity within a project matches this package/activity FQN
                 break;
             } catch (ClassNotFoundException exception) {
-                Timber.e("Class not found within known packages.", exception);
+                Timber.e(exception, "Class not found within known packages.");
             }
         }
         return targetClass;

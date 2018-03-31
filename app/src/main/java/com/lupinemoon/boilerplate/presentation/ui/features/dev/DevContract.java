@@ -1,11 +1,11 @@
 package com.lupinemoon.boilerplate.presentation.ui.features.dev;
 
-import java.io.File;
-
 import com.lupinemoon.boilerplate.databinding.ActivityDevBinding;
 import com.lupinemoon.boilerplate.presentation.ui.base.IBasePresenter;
 import com.lupinemoon.boilerplate.presentation.ui.base.IBaseView;
 import com.lupinemoon.boilerplate.presentation.ui.base.IBaseViewModel;
+
+import java.io.File;
 
 class DevContract {
 

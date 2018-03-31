@@ -2,14 +2,15 @@ package com.lupinemoon.boilerplate.data.storage.remote;
 
 import android.content.Context;
 
-import io.reactivex.Completable;
-import io.reactivex.Flowable;
 import com.lupinemoon.boilerplate.data.models.AuthToken;
 import com.lupinemoon.boilerplate.data.models.KeyValue;
 import com.lupinemoon.boilerplate.data.network.services.AuthService;
 import com.lupinemoon.boilerplate.data.network.services.TemplateService;
 import com.lupinemoon.boilerplate.data.storage.AppRepository;
 import com.lupinemoon.boilerplate.data.storage.interfaces.AppDataStore;
+
+import io.reactivex.Completable;
+import io.reactivex.Flowable;
 
 public class AppRemoteDataStore implements AppDataStore {
 

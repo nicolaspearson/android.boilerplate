@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.databinding.ActivityLoginBinding;
 import com.lupinemoon.boilerplate.presentation.ui.base.BaseVMPActivity;
 import com.lupinemoon.boilerplate.presentation.ui.base.BaseViewModel;
 import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
 import com.lupinemoon.boilerplate.presentation.utils.AnimationUtils;
+
+import timber.log.Timber;
 
 public class LoginActivity extends BaseVMPActivity<LoginContract.ViewModel, LoginContract.Presenter, ActivityLoginBinding> implements LoginContract.View {
 

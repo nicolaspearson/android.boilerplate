@@ -15,10 +15,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import timber.log.Timber;
-import uk.co.chrisjenx.calligraphy.CalligraphyUtils;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.presentation.utils.AndroidUtils;
+
+import timber.log.Timber;
+import uk.co.chrisjenx.calligraphy.CalligraphyUtils;
 
 public abstract class BaseDrawerActivity<B extends ViewDataBinding> extends BaseActivity<B> implements IBaseView {
 

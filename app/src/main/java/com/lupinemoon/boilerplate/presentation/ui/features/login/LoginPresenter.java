@@ -4,15 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
+import com.lupinemoon.boilerplate.presentation.ui.base.BasePresenter;
+import com.lupinemoon.boilerplate.presentation.ui.features.landing.LandingActivity;
+import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
+
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-import com.lupinemoon.boilerplate.presentation.ui.base.BasePresenter;
-import com.lupinemoon.boilerplate.presentation.ui.features.landing.LandingActivity;
-import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
 
 class LoginPresenter extends BasePresenter implements LoginContract.Presenter {
 

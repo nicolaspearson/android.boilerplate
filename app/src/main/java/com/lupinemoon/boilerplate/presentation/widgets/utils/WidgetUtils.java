@@ -16,8 +16,8 @@ import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-import com.lupinemoon.boilerplate.presentation.widgets.DotsView;
 import com.lupinemoon.boilerplate.R;
+import com.lupinemoon.boilerplate.presentation.widgets.DotsView;
 import com.lupinemoon.boilerplate.presentation.widgets.interfaces.GenericCallback;
 
 public class WidgetUtils {

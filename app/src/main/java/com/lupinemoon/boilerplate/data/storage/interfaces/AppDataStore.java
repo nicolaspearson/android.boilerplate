@@ -2,10 +2,11 @@ package com.lupinemoon.boilerplate.data.storage.interfaces;
 
 import android.content.Context;
 
-import io.reactivex.Completable;
-import io.reactivex.Flowable;
 import com.lupinemoon.boilerplate.data.models.AuthToken;
 import com.lupinemoon.boilerplate.data.models.KeyValue;
+
+import io.reactivex.Completable;
+import io.reactivex.Flowable;
 
 public interface AppDataStore {
 

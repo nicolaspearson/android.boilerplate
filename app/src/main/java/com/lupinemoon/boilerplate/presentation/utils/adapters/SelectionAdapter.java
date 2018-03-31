@@ -5,13 +5,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.data.models.KeyValue;
 import com.lupinemoon.boilerplate.databinding.ListItemSelectionBinding;
 import com.lupinemoon.boilerplate.presentation.widgets.interfaces.GenericItemSelected;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.SelectionItemViewHolder> {
 

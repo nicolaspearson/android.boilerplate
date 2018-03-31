@@ -14,7 +14,6 @@ import android.view.Window;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.BuildConfig;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.databinding.ActivitySplashBinding;
@@ -22,6 +21,8 @@ import com.lupinemoon.boilerplate.presentation.ui.base.BaseActivity;
 import com.lupinemoon.boilerplate.presentation.ui.base.IBasePresenter;
 import com.lupinemoon.boilerplate.presentation.ui.features.landing.LandingActivity;
 import com.lupinemoon.boilerplate.presentation.ui.features.login.LoginActivity;
+
+import timber.log.Timber;
 
 public class SplashActivity extends BaseActivity<ActivitySplashBinding> implements SplashContract.View {
 

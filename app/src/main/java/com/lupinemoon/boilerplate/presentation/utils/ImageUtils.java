@@ -18,6 +18,7 @@ import android.net.Uri;
 import android.os.Parcelable;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.system.ErrnoException;
 import android.widget.ImageView;
 
@@ -125,6 +126,7 @@ public class ImageUtils {
     /**
      * Test if we can open the given Android URI
      */
+    @RequiresApi(21)
     public static boolean isUriRequiresPermissions(Activity activity, Uri uri) {
         try {
             ContentResolver resolver = activity.getContentResolver();

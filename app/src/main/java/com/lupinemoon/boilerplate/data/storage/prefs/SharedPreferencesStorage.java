@@ -6,12 +6,12 @@ import android.support.v4.util.LruCache;
 import android.text.TextUtils;
 
 import com.google.gson.Gson;
+import com.lupinemoon.boilerplate.BuildConfig;
+import com.lupinemoon.boilerplate.data.storage.interfaces.Storage;
 
 import java.lang.reflect.Type;
 
 import timber.log.Timber;
-import com.lupinemoon.boilerplate.BuildConfig;
-import com.lupinemoon.boilerplate.data.storage.interfaces.Storage;
 
 public class SharedPreferencesStorage implements Storage {
 

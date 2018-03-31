@@ -18,9 +18,9 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import com.lupinemoon.boilerplate.R;
+
+import java.util.ArrayList;
 
 public class AutofitHelper {
 

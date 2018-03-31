@@ -36,7 +36,7 @@ public class NetworkRequestBody extends RealmObject {
             requestBody.writeTo(buffer);
             setContent(buffer.readByteArray());
         } catch (Exception e) {
-            Timber.e("Conversion Failed", e);
+            Timber.e(e, "Conversion Failed");
         }
     }
 

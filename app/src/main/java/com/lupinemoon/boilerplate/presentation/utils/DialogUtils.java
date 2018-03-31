@@ -10,8 +10,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.CompoundButton;
 
-import java.util.List;
-
 import com.lupinemoon.boilerplate.MainApplication;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.data.models.KeyValue;
@@ -22,6 +20,8 @@ import com.lupinemoon.boilerplate.presentation.ui.base.BaseActivity;
 import com.lupinemoon.boilerplate.presentation.utils.adapters.SelectionAdapter;
 import com.lupinemoon.boilerplate.presentation.widgets.DecoratorOnClickListener;
 import com.lupinemoon.boilerplate.presentation.widgets.interfaces.GenericItemSelected;
+
+import java.util.List;
 
 public class DialogUtils {
 

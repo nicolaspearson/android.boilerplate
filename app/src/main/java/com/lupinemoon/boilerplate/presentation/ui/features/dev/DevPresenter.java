@@ -4,17 +4,18 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 
+import com.lupinemoon.boilerplate.R;
+import com.lupinemoon.boilerplate.data.models.KeyValue;
+import com.lupinemoon.boilerplate.data.storage.AppRepository;
+import com.lupinemoon.boilerplate.presentation.ui.base.BasePresenter;
+import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
+
 import java.io.File;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
-import com.lupinemoon.boilerplate.R;
-import com.lupinemoon.boilerplate.data.models.KeyValue;
-import com.lupinemoon.boilerplate.data.storage.AppRepository;
-import com.lupinemoon.boilerplate.presentation.ui.base.BasePresenter;
-import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
 
 class DevPresenter extends BasePresenter implements DevContract.Presenter {
 

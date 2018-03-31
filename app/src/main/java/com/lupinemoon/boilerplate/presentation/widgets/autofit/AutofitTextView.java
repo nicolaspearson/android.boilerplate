@@ -1,6 +1,7 @@
 package com.lupinemoon.boilerplate.presentation.widgets.autofit;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.TextView;
@@ -8,7 +9,7 @@ import android.widget.TextView;
 /**
  * A {@link TextView} that re-sizes its text to be no larger than the width of the view.
  */
-public class AutofitTextView extends TextView implements AutofitHelper.OnTextSizeChangeListener {
+public class AutofitTextView extends AppCompatTextView implements AutofitHelper.OnTextSizeChangeListener {
 
     private AutofitHelper mHelper;
 

@@ -3,6 +3,21 @@ package com.lupinemoon.boilerplate.data.storage;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.lupinemoon.boilerplate.BuildConfig;
+import com.lupinemoon.boilerplate.MainApplication;
+import com.lupinemoon.boilerplate.data.models.AuthToken;
+import com.lupinemoon.boilerplate.data.models.KeyValue;
+import com.lupinemoon.boilerplate.data.models.NetworkRequest;
+import com.lupinemoon.boilerplate.data.network.rest.ServiceGenerator;
+import com.lupinemoon.boilerplate.data.storage.interfaces.AppDataStore;
+import com.lupinemoon.boilerplate.data.storage.local.AppLocalDataStore;
+import com.lupinemoon.boilerplate.data.storage.remote.AppRemoteDataStore;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.RxBus;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.events.PostRequestFailedEvent;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.events.QueueProcessingComplete;
+import com.lupinemoon.boilerplate.presentation.services.rxbus.events.QueueProcessingStarted;
+import com.lupinemoon.boilerplate.presentation.utils.NetworkUtils;
+
 import org.reactivestreams.Publisher;
 
 import java.io.File;
@@ -24,20 +39,6 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Request;
 import timber.log.Timber;
-import com.lupinemoon.boilerplate.BuildConfig;
-import com.lupinemoon.boilerplate.MainApplication;
-import com.lupinemoon.boilerplate.data.models.AuthToken;
-import com.lupinemoon.boilerplate.data.models.NetworkRequest;
-import com.lupinemoon.boilerplate.data.models.KeyValue;
-import com.lupinemoon.boilerplate.data.network.rest.ServiceGenerator;
-import com.lupinemoon.boilerplate.data.storage.interfaces.AppDataStore;
-import com.lupinemoon.boilerplate.data.storage.local.AppLocalDataStore;
-import com.lupinemoon.boilerplate.data.storage.remote.AppRemoteDataStore;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.RxBus;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.events.PostRequestFailedEvent;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.events.QueueProcessingComplete;
-import com.lupinemoon.boilerplate.presentation.services.rxbus.events.QueueProcessingStarted;
-import com.lupinemoon.boilerplate.presentation.utils.NetworkUtils;
 
 public class AppRepository implements AppDataStore {
 
@@ -46,9 +47,8 @@ public class AppRepository implements AppDataStore {
     private AppLocalDataStore appLocalDataStore;
     private AppRemoteDataStore appRemoteDataStore;
 
-    private boolean offlineFinished = false;
     private boolean networkFinished = false;
-    private boolean processingQueue = false;
+    private boolean processingQueue;
 
     private final long queueInterval = 5000;
 
@@ -81,7 +81,7 @@ public class AppRepository implements AppDataStore {
                 .observeOn(Schedulers.io())
                 .subscribe(new Consumer<PostRequestFailedEvent>() {
                     @Override
-                    public void accept(@NonNull PostRequestFailedEvent postRequestFailedEvent) throws Exception {
+                    public void accept(@NonNull PostRequestFailedEvent postRequestFailedEvent) {
                         Timber.w("POST Request Failed");
                         Request request = postRequestFailedEvent.getRequest();
                         NetworkRequest networkRequest = new NetworkRequest(
@@ -168,24 +168,24 @@ public class AppRepository implements AppDataStore {
                                                         String url = response.request().url().toString();
                                                     }
                                                 } catch (Exception e) {
-                                                    Timber.w("Post Processing Request Failed", e);
+                                                    Timber.w(e, "Post Processing Request Failed");
                                                 }
                                             }
                                         }
                                         @Override
                                         public void onFailure(Call call, IOException e) {
-                                            Timber.w("Process Request Failed", e);
+                                            Timber.w(e, "Process Request Failed");
                                         }
                                     });
                                 }
                             } catch (Exception e) {
-                                Timber.w("Process Request Failed", e);
+                                Timber.w(e, "Process Request Failed");
                             }
                         }
                     }, new Consumer<Throwable>() {
                         @Override
                         public void accept(@NonNull Throwable throwable) throws Exception {
-                            Timber.w("Process Request Failed", throwable);
+                            Timber.w(throwable, "Process Request Failed");
                             RxBus.getDefault().post(new QueueProcessingComplete());
                             processingQueue = false;
                         }
@@ -243,14 +243,14 @@ public class AppRepository implements AppDataStore {
                         .observeOn(Schedulers.io())
                         .doOnNext(new Consumer<KeyValue>() {
                             @Override
-                            public void accept(KeyValue newKeyValue) throws Exception {
+                            public void accept(KeyValue newKeyValue) {
                                 networkFinished = true;
                                 appLocalDataStore.saveKeyValue(context, newKeyValue);
                             }
                         }))
                 .filter(new Predicate<KeyValue>() {
                     @Override
-                    public boolean test(KeyValue newKeyValue) throws Exception {
+                    public boolean test(KeyValue newKeyValue) {
                         // Return true if this result is returned from the network
                         if (networkFinished) {
                             networkFinished = false;
@@ -274,13 +274,13 @@ public class AppRepository implements AppDataStore {
                         .observeOn(AndroidSchedulers.mainThread())
                         .doOnNext(new Consumer<KeyValue>() {
                             @Override
-                            public void accept(KeyValue newKeyValue) throws Exception {
+                            public void accept(KeyValue newKeyValue) {
                                 networkFinished = true;
                             }
                         }))
                 .filter(new Predicate<KeyValue>() {
                     @Override
-                    public boolean test(KeyValue newKeyValue) throws Exception {
+                    public boolean test(KeyValue newKeyValue) {
                         // Return true if this result is returned from the network
                         if (networkFinished) {
                             networkFinished = false;

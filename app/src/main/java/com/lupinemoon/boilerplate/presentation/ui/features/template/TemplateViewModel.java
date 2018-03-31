@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.android.databinding.library.baseAdapters.BR;
-
 import com.lupinemoon.boilerplate.presentation.ui.base.BaseViewModel;
 import com.lupinemoon.boilerplate.presentation.utils.ActivityUtils;
 

@@ -1,9 +1,9 @@
 package com.lupinemoon.boilerplate.presentation.widgets.roundedimageview;
 
-import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.widget.ImageView;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 
-import java.util.Arrays;
+import java.security.MessageDigest;
 
 public final class RoundedTransformationBuilder {
 
@@ -144,10 +144,14 @@ public final class RoundedTransformationBuilder {
      *
      * @return the {@link BitmapTransformation}
      */
-    public BitmapTransformation build(Context context) {
-        return new BitmapTransformation(context) {
+    public BitmapTransformation build() {
+        return new BitmapTransformation() {
             @Override
-            protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
+            protected Bitmap transform(
+                    @NonNull BitmapPool pool,
+                    @NonNull Bitmap toTransform,
+                    int outWidth,
+                    int outHeight) {
                 Bitmap transformed = RoundedDrawable.fromBitmap(toTransform)
                         .setScaleType(mScaleType)
                         .setCornerRadius(mCornerRadii[0], mCornerRadii[1], mCornerRadii[2], mCornerRadii[3])
@@ -162,11 +166,8 @@ public final class RoundedTransformationBuilder {
             }
 
             @Override
-            public String getId() {
-                return "r:" + Arrays.toString(mCornerRadii)
-                        + "b:" + mBorderWidth
-                        + "c:" + mBorderColor
-                        + "o:" + mOval;
+            public void updateDiskCacheKey(@NonNull MessageDigest messageDigest) {
+
             }
         };
     }

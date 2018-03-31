@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.FrameLayout;
 
+import com.lupinemoon.boilerplate.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.lupinemoon.boilerplate.R;
 
 public class SwipeFlingAdapterView extends BaseFlingAdapterView {
 

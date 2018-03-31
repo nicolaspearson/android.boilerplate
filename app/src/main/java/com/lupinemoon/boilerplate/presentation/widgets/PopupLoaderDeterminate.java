@@ -9,9 +9,10 @@ import android.view.WindowManager;
 import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.presentation.widgets.interfaces.GenericCallback;
+
+import timber.log.Timber;
 
 public class PopupLoaderDeterminate {
 

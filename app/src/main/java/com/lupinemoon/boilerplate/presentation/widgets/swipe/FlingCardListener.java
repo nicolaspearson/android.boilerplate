@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.presentation.widgets.interfaces.GenericCallback;
+
+import timber.log.Timber;
 
 public class FlingCardListener implements View.OnTouchListener {
 

@@ -15,11 +15,11 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-
-import timber.log.Timber;
 import com.lupinemoon.boilerplate.MainApplication;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.data.storage.interfaces.Storage;
+
+import timber.log.Timber;
 
 public class AndroidUtils {
 

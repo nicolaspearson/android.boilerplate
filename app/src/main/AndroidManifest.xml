@@ -3,6 +3,7 @@
     package="com.lupinemoon.boilerplate">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="com.lupinemoon.boilerplate.MainApplication"
@@ -14,8 +15,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="YOUR_API_KEY" />
-
+            android:value="b1fc1f2124c906c40d2327a09fdb8fdaac8a4651" />
         <activity
             android:name="com.lupinemoon.boilerplate.MainActivity"
             android:label="@string/app_name"

@@ -22,11 +22,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.functions.Consumer;
-import timber.log.Timber;
-import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 import com.lupinemoon.boilerplate.R;
 import com.lupinemoon.boilerplate.data.analytics.AnalyticsService;
 import com.lupinemoon.boilerplate.data.storage.AppRepository;
@@ -41,14 +36,20 @@ import com.lupinemoon.boilerplate.presentation.ui.features.splash.SplashActivity
 import com.lupinemoon.boilerplate.presentation.utils.Constants;
 import com.lupinemoon.boilerplate.presentation.utils.DialogUtils;
 import com.lupinemoon.boilerplate.presentation.utils.ErrorUtils;
-import com.lupinemoon.boilerplate.presentation.utils.RetrofitUtils;
 import com.lupinemoon.boilerplate.presentation.utils.NetworkUtils;
+import com.lupinemoon.boilerplate.presentation.utils.RetrofitUtils;
 import com.lupinemoon.boilerplate.presentation.utils.ViewUtils;
 import com.lupinemoon.boilerplate.presentation.widgets.AppLifecycleHandler;
 import com.lupinemoon.boilerplate.presentation.widgets.OnBackPressedListener;
 import com.lupinemoon.boilerplate.presentation.widgets.PopupLoader;
 import com.lupinemoon.boilerplate.presentation.widgets.Toasty;
 import com.lupinemoon.boilerplate.presentation.widgets.interfaces.GenericCallback;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
+import timber.log.Timber;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.lupinemoon.boilerplate.presentation.utils.NetworkUtils.hasActiveNetworkConnection;
 

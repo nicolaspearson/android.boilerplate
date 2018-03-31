@@ -2,12 +2,13 @@ package com.lupinemoon.boilerplate.data.network.services;
 
 import android.content.Context;
 
-import io.reactivex.Completable;
-import io.reactivex.Flowable;
 import com.lupinemoon.boilerplate.data.models.KeyValue;
 import com.lupinemoon.boilerplate.data.network.interfaces.TemplateApi;
 import com.lupinemoon.boilerplate.data.network.rest.ServiceGenerator;
 import com.lupinemoon.boilerplate.data.storage.AppRepository;
+
+import io.reactivex.Completable;
+import io.reactivex.Flowable;
 
 public class TemplateService {
 
